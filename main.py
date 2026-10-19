@@ -8,3 +8,7 @@ app.mount("/view", StaticFiles(directory="view"))
 @app.get("/")
 def root():
     return RedirectResponse("/view/index.html")
+
+@app.get("/one")
+def step_one():
+    return{"step":"one"}
